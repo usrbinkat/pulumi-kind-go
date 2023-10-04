@@ -1,0 +1,50 @@
+
+~/drive/Git/pulumi/kind-go ❯ pwd
+/Users/usrbinkat/drive/Git/pulumi/kind-go
+
+~/drive/Git/pulumi/kind-go ❯ ls ~/drive
+Documents  Git  LibreSign  Notes  Photos  Talk
+
+~/drive/Git/pulumi/kind-go ❯ clear
+
+~/drive/Git/pulumi/kind-go loading ❯
+~/drive/Git/pulumi/kind-go ❯ pwd
+/Users/usrbinkat/drive/Git/pulumi/kind-go
+
+~/drive/Git/pulumi/kind-go ❯ ls ../kind-go/kind/
+config.yaml  kind.go  volumes.go
+
+~/drive/Git/pulumi/kind-go ❯ ls ../kind-go/kind/config.yaml
+../kind-go/kind/config.yaml
+
+~/drive/Git/pulumi/kind-go ❯ pulumi up -y
+Updating (studio)
+
+     Type                         Name                           Status                  Info
+     pulumi:pulumi:Stack          zot-studio                     **failed**              1 error; 2 warnings; 16 messages
+     └─ my:kind:KindCluster       default-cluster
+ +      └─ command:local:Command  default-cluster-createCluster  **creating failed**     1 error
+
+
+Diagnostics:
+  pulumi:pulumi:Stack (zot-studio):
+    Starting the initialization process...
+    Starting dependency checks...
+    Successfully detected all local dependencies.
+    Initialization and dependency checks are complete
+    Starting Kind cluster configuration...
+    Kind cluster configuration is ready
+    Ready to build Kind cluster
+    error: update failed
+
+    Current directory is: /Users/usrbinkat/drive/Git/pulumi/kind-go
+    Current directory is: /Users/usrbinkat/drive/Git/pulumi/kind-go
+
+  command:local:Command (default-cluster-createCluster):
+    error: exit status 1: running "kind create cluster --name default-cluster --config ./kind/config.yaml":
+    ERROR: failed to create cluster: error reading file: open ./kind/config.yaml: no such file or directory
+
+Resources:
+    4 unchanged
+
+Duration: 3s

@@ -1,0 +1,3 @@
+name: pulumi-kind-go
+runtime: go
+description: Deploy & Configure a Kind Kubernetes Cluster with infrastructure apps for local k8s app development.
